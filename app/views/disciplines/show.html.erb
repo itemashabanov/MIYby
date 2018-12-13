@@ -1,0 +1,26 @@
+<div class="show_form">
+<h2 id="notice"><%= notice %></h2>
+
+<p>
+  <strong>Название дисциплины:</strong>
+  <%= @discipline.discipline %>
+</p>
+
+<p>
+  <strong>Преподаватель:</strong>
+  <%= @discipline.teacher %>
+</p>
+
+<p>
+  <strong>Семестр:</strong>
+  <%= @discipline.semester %>
+</p>
+
+  <p>
+    <strong>Группа:</strong>
+    <%= @discipline.group_id %>
+  </p>
+
+<%= link_to 'Изменить', edit_discipline_path(@discipline) %> |
+<%= link_to 'В меню', disciplines_path %>
+</div>

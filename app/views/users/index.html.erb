@@ -1,0 +1,24 @@
+
+<div class="main_group">
+  <h1>Список пользователей</h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="list_description"><%= user.name %></td>
+        <td class="list_action">
+          <%= link_to 'Изменить', edit_user_path(user) %>
+          <%= link_to 'Удалить', user, method: :delete, data: { confirm: 'Вы уверены?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить пользователя', new_user_path %>
+</div>

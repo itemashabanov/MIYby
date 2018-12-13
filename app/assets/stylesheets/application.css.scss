@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+#header {
+  width: 100%;
+  height: 40px;
+  line-height:  40px;
+}
+
+#header h2 {
+  float: right;
+  color: #97240a;
+  padding-right: 1%;
+}
+
+ul.ul {
+  margin: 0; /* Обнуляем значение отступов */
+  padding: 2px; /* Значение полей */
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+ul.ul #logout_b {
+  display: inline; /* Отображать как строчный элемент */
+  margin-right: 5px; /* Отступ слева */
+  border: 1px solid #000; /* Рамка вокруг текста */
+  padding: 3px; /* Поля вокруг текста */
+  background-color: #97240a;
+  color: #eaeaea;
+  width: 5%;
+  height: 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+ul.ul .logout_b {
+  display: inline; /* Отображать как строчный элемент */
+  margin-right: 5px; /* Отступ слева */
+  border: 1px solid #000; /* Рамка вокруг текста */
+  padding: 10px 10px 0 10px; /* Поля вокруг текста */
+  background-color: #1a7001;
+  height: 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  line-height: 100%;
+}
+
+.logout_b a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #eaeaea;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.logout_b a:hover {
+  background: none;
+}
+
+#wrapper {
+  height: 94%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main  {
+  flex: 1 0 auto;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  flex: 0 0 auto;
+  background-color: #97240a;
+}
+
+.miu_image {
+  height: 40px;
+  width: 40px;
+  float: left;
+  padding-left: 1%;
+}
+
+#copy {
+  float: right;
+  padding-right: 1%;
+  color: #eaeaea;
+}
+
+#notice {
+
+}

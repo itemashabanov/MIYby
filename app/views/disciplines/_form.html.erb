@@ -1,0 +1,38 @@
+<%= form_with(model: discipline, local: true) do |form| %>
+  <% if discipline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(discipline.errors.count, "error") %> prohibited this discipline from being saved:</h2>
+
+      <ul>
+      <% discipline.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <fieldset style="border-color: #97240a;">
+  <div class="field">
+    <%= form.label :Дисциплина %>
+    <%= form.text_field :discipline, id: :discipline_discipline, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Преподаватель %>
+    <%= form.text_field :teacher, id: :discipline_teacher, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Семестр %>
+    <%= form.text_field :semester, id: :discipline_semester, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Группа %>
+    <%= form.text_field :group_id, id: :discipline_group_id, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= submit_tag "Сохранить", class: 'edit_button' %>
+  </div>
+    </fieldset>
+<% end %>

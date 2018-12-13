@@ -1,0 +1,25 @@
+
+
+<div class="show_form">
+  <h2 id="notice"><%= notice %></h2>
+
+   <br>
+<p>
+  <strong>Номер группы:</strong>
+  <%= @group.group %>
+</p>
+
+<p>
+  <strong>Специальность:</strong>
+  <%= @group.specialty %>
+</p>
+
+<p>
+  <strong>Специализация:</strong>
+  <%= @group.specialization %>
+</p>
+
+<%= link_to 'Изменить', edit_group_path(@group) %> |
+<%= link_to 'В меню', groups_path %>
+
+    </div>

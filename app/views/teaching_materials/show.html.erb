@@ -1,0 +1,17 @@
+<div class="show_form">
+
+<h2 id="notice"><%= notice %></h2>
+
+<p>
+  <strong>Название:</strong>
+  <%= @teaching_material.name %>
+</p>
+
+<p>
+  <strong>Ссылка:</strong>
+  <%= @teaching_material.url %>
+</p>
+
+<%= link_to 'Изменить', edit_teaching_material_path(@teaching_material) %> |
+<%= link_to 'В меню', teaching_materials_path %>
+</div>

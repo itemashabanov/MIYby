@@ -1,0 +1,46 @@
+
+<div class="main_group">
+<h1>Список групп</h1>
+
+
+
+<%= form_tag(groups_path, method: :get, class: 'search_form') do %>
+      <p id="notice"><%= notice %></p>
+    <%= text_field_tag :group, params[:group], class: 'search' %>
+    <%= submit_tag "Найти", class: 'button' %>
+<% end %>
+
+
+<table>
+<% @groups.each do |group| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td class="list_description">
+      <a href="<%= disciplines_dddsearch_path(:group_id => group.group) %>">
+        <dt>
+          <%= group.group %>
+        </dt>
+      </a>
+    </td>
+    <td class="descript">
+        <dd>
+          Специальность: <%= truncate(strip_tags(group.specialty), length: 80) %>
+        </dd>
+        <dd>
+          Специализация: <%= truncate(strip_tags(group.specialization), length: 80) %>
+        </dd>
+    </td>
+    <% if session[:user_id] %>
+    <td class="list_action">
+      <%= link_to 'Изменить', edit_group_path(group) %><br/>
+      <%= link_to 'Удалить', group, method: :delete, data: { confirm: 'Вы уверены?' } %>
+    </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if session[:user_id] %>
+<%= link_to 'Добавить группу', new_group_path %>
+<% end %>
+</div>

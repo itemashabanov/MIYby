@@ -1,0 +1,160 @@
+.users {
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .main_group {
+    width: 60%;
+    padding: 4% 20% 2% 20%;
+  }
+
+  .main_group h1 {
+    padding-left: 2%;
+    padding: 2%;
+    float: left;
+    margin-top: 1%;
+  }
+
+  .search_form {
+    padding: 0 0 2% 50%;
+    margin: 0;
+  }
+
+  .search {
+    width: 83%;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .search:focus {
+    outline-color:#97240a;
+  }
+
+  .button {
+    background-color: #97240a;
+    color: #eaeaea;
+    width: 15%;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .button:focus {
+    outline-color:#97240a;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+    border: 1px solid black;
+  }
+
+  .list_description {
+    width: 70%;
+    vertical-align: middle;
+
+    dt {
+      color: #244;
+      font-weight: bold;
+      font-size: larger;
+      text-align: center;
+    }
+  }
+
+  .descript {
+    width: 70%;
+    vertical-align: middle;
+  }
+
+  .list_action {
+    font-size: 14px;
+    text-align: center;
+    padding-left: 1em;
+
+  }
+
+  .list_action a {
+    text-decoration: none;
+    color: #574a4d;
+  }
+
+  .list_action a:hover {
+    text-decoration: none;
+    color: #97240a;
+    background: none;
+  }
+
+  .list_line_even {
+    background: #d2aaa5;
+  }
+
+  .list_line_odd {
+    background: #d6d0d9;
+  }
+
+  #notice {
+    float: left;
+  }
+
+  .edit_form {
+    width: 40%;
+    padding: 10% 30% 0 30%;
+  }
+
+  .edit {
+    padding: 1%;
+  }
+
+  .edit_input {
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .field {
+    padding: 2% 2% 0 16%;
+  }
+
+  .edit_input:focus {
+    outline-color:#97240a;
+  }
+
+  .edit_button {
+    background-color: #97240a;
+    color: #eaeaea;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 2%;
+    margin-left: 1px;
+    cursor: pointer;
+  }
+
+  .show_form {
+    padding: 1%;
+
+    p {
+      font-size: 20px;
+      margin-bottom: 1%;
+    }
+  }
+
+  .edit_button:focus {
+    outline-color:#97240a;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="depot_form">
+  <% if flash[:alert] %>
+      <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  <%= form_tag do %>
+      <fieldset style="border-color: #97240a;">
+  <legend style="color: #97240a; font-size: 24px;">Вход в систему</legend>
+  <div class="div_input">
+    <%= text_field_tag :name, params[:name], class: 'login_input', placeholder: 'Логин' %>
+  </div>
+  <div class="div_input">
+    <%= password_field_tag :password, params[:password], class: 'login_input', placeholder: 'Пароль' %>
+  </div>
+  <div class="div_input">
+    <%= submit_tag "Войти", class: 'button' %>
+  </div>
+</fieldset>
+  <% end %>
+</div>

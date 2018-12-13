@@ -1,0 +1,38 @@
+<%= form_with(model: teaching_material, local: true) do |form| %>
+  <% if teaching_material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(teaching_material.errors.count, "error") %> prohibited this teaching_material from being saved:</h2>
+
+      <ul>
+      <% teaching_material.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <fieldset style="border-color: #97240a;">
+  <div class="field">
+    <%= form.label :Название %>
+    <%= form.text_field :name, id: :teaching_material_name, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ссылка %>
+    <%= form.text_field :url, id: :teaching_material_url, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+      <%= form.label :Название_дисциплины %>
+      <%= form.text_field :discipline_id, id: :teaching_material_discipline_id, class: 'edit_input' %>
+    </div>
+
+      <div class="field">
+        <%= form.label :Название_группы %>
+        <%= form.text_field :group_id, id: :teaching_material_group_id, class: 'edit_input' %>
+      </div>
+
+      <div class="field">
+        <%= submit_tag "Сохранить", class: 'edit_button' %>
+      </div>
+    </fieldset>
+<% end %>

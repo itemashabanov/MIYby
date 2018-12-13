@@ -1,0 +1,32 @@
+<div class="main_group">
+  <h1>Список материалов</h1>
+
+<%= form_tag(teaching_materials_ttsearch_path, method: :get, class: 'search_form') do %>
+      <p id="notice"><%= notice %></p>
+    <%= text_field_tag :name, params[:name], class: 'search' %>
+      <%= submit_tag "Найти", class: 'button' %>
+<% end %>
+
+<table>
+  <% @teaching_materials.each do |teaching_material| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="list_description">
+            <a href="<%= teaching_material.url %>"><dt>
+              <%= teaching_material.name %>
+            </dt> </a>
+        </td>
+        <% if session[:user_id] %>
+        <td class="list_action">
+          <%= link_to 'Изменить', edit_teaching_material_path(teaching_material) %><br/>
+          <%= link_to 'Удалить', teaching_material, method: :delete, data: { confirm: 'Вы уверены?' } %>
+        </td>
+            <% end %>
+      </tr>
+  <% end %>
+</table>
+
+<br>
+  <% if session[:user_id] %>
+      <%= link_to 'Добавить методический материал', new_teaching_material_path %>
+  <% end %>
+</div>

@@ -1,0 +1,43 @@
+<div class="main_group">
+  <h1>Список дисциплин</h1>
+
+<%= form_tag(disciplines_ddsearch_path, method: :get, class: 'search_form') do %>
+    <p id="notice"><%= notice %></p>
+    <%= text_field_tag :discipline, params[:discipline], class: 'search' %>
+      <%= submit_tag "Найти", class: 'button' %>
+<% end %>
+
+<table>
+  <% @disciplines.each do |discipline| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="list_description">
+            <a href="<%= teaching_materials_tsearch_path(:discipline_id => discipline.discipline) %>"><dt>
+              <%= discipline.discipline %>
+            </dt></a>
+        </td>
+        <td class="descript">
+            <dd>
+              Преподаватель: <%= truncate(strip_tags(discipline.teacher), length: 80) %>
+            </dd>
+            <dd>
+          Семестр: <%= truncate(strip_tags(discipline.semester), length: 80) %>
+        </dd>
+          <dd>
+            Группа: <%= truncate(strip_tags(discipline.group_id), length: 80) %>
+          </dd>
+        </td>
+        <% if session[:user_id] %>
+        <td class="list_action">
+          <%= link_to 'Изменить', edit_discipline_path(discipline) %><br/>
+          <%= link_to 'Удалить', discipline, method: :delete, data: { confirm: 'Вы уверены?' } %>
+        </td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>
+
+<br>
+  <% if session[:user_id] %>
+<%= link_to 'Добавить дисциплину', new_discipline_path %>
+  <% end %>
+</div>

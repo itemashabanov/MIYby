@@ -1,0 +1,64 @@
+.client {
+  margin: 0;
+  padding: 0;
+
+  .client_form {
+    width: 100%;
+    height: 85%;
+    margin: 3% 0 3% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+
+    &:before {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+
+  .client_search_form h1, p {
+    color: #97240a;
+    padding: 2%;
+  }
+
+  .client_search_form {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    width: 50%;
+    margin-top: -4%;
+  }
+
+  .client_search {
+    width: 83%;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .client_search:focus {
+    outline-color:#97240a;
+  }
+
+  .button {
+    background-color: #97240a;
+    color: #eaeaea;
+    width: 15%;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .button:focus {
+    outline-color:#97240a;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="main_group">
+  <h1 class="hh1">Список материалов дисциплины: <%= @t %></h1>
+
+
+<table>
+  <% if TeachingMaterial.where(discipline_id: @t).count > 0 %>
+  <% @teaching_materials.each do |teaching_material| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="list_description">
+            <a href="<%= teaching_material.url %>"><dt>
+              <%= teaching_material.name %>
+            </dt> </a>
+        </td>
+        <% if session[:user_id] %>
+        <td class="list_action">
+          <%= link_to 'Изменить', edit_teaching_material_path(teaching_material) %><br/>
+          <%= link_to 'Удалить', teaching_material, method: :delete, data: { confirm: 'Вы уверены?' } %>
+        </td>
+        <% end %>
+      </tr>
+  <% end %>
+  <% end %>
+</table>
+
+<br>
+  <% if session[:user_id] %>
+      <%= link_to 'Добавить методический материал', new_teaching_material_path %>
+  <% end %>
+</div>

@@ -1,0 +1,33 @@
+<%= form_with(model: group, local: true) do |form| %>
+  <% if group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <fieldset style="border-color: #97240a;">
+  <div class="field">
+    <%= form.label :Группа %>
+    <%= form.text_field :group, id: :group_group, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Специальность %>
+    <%= form.text_field :specialty, id: :group_specialty, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Специализация %>
+    <%= form.text_field :specialization, id: :group_specialization, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= submit_tag "Сохранить", class: 'edit_button' %>
+  </div>
+    </fieldset>
+<% end %>
