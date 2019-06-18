@@ -1,9 +1,9 @@
 <div class="main_group">
-  <h1 class="hh1">Список дисциплин группы: <%= @ddd %></h1>
+  <h1 class="hh1">Список дисциплин группы: <%= @g %></h1>
 
 
 <table>
-  <% if Discipline.where(group_id: @ddd).count > 0 %>
+  <% if Discipline.where(specialty_id: @ddd).count > 0 %>
   <% @disciplines.each do |discipline| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="list_description">
@@ -16,10 +16,10 @@
               Преподаватель: <%= truncate(strip_tags(discipline.teacher), length: 80) %>
             </dd>
             <dd>
-              Семестр: <%= truncate(strip_tags(discipline.semester), length: 80) %>
+              Курс: <%= truncate(strip_tags(discipline.course), length: 80) %>
             </dd>
           <dd>
-            Группа: <%= truncate(strip_tags(discipline.group_id), length: 80) %>
+            Специальность: <%= truncate(strip_tags(discipline.specialty_id), length: 80) %>
           </dd>
         </td>
         <% if session[:user_id] %>

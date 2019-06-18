@@ -20,10 +20,10 @@
               Преподаватель: <%= truncate(strip_tags(discipline.teacher), length: 80) %>
             </dd>
             <dd>
-          Семестр: <%= truncate(strip_tags(discipline.semester), length: 80) %>
+          Курс: <%= truncate(strip_tags(discipline.course), length: 80) %>
         </dd>
           <dd>
-            Группа: <%= truncate(strip_tags(discipline.group_id), length: 80) %>
+            Специальность: <%= truncate(strip_tags(discipline.specialty_id), length: 80) %>
           </dd>
         </td>
         <% if session[:user_id] %>

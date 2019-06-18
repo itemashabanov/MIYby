@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :specialties
   get 'admin' => 'admin#index'
   get 'disciplines/dsearch'
+  get 'groups/dsearch'
   get 'disciplines/ddsearch'
+  get 'groups/groupsearch'
   get 'disciplines/dddsearch'
   get 'disciplines/find_semester'
   get 'teaching_materials/tsearch'

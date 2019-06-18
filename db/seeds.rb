@@ -7,3 +7,8 @@ Discipline.delete_all
 Discipline.create(name: 'Математика',
                   teacher: %{Петров В.А.},
                   semester: %{1, 2, 3})
+
+User.delete_all
+User.create(name: 'admin',
+            password: 'admin',
+            password_confirmation: 'admin')

@@ -1,0 +1,18 @@
+<div class="show_form">
+  <h2 id="notice"><%= notice %></h2>
+
+  <br>
+
+<p>
+  <strong>Специальность:</strong>
+  <%= @specialty.specialty %>
+</p>
+
+<p>
+  <strong>Специализация:</strong>
+  <%= @specialty.specialization %>
+</p>
+
+<%= link_to 'Изменить', edit_specialty_path(@specialty) %> |
+<%= link_to 'Назад', specialties_path %>
+</div>

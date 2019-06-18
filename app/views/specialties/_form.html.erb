@@ -1,0 +1,28 @@
+<%= form_with(model: specialty, local: true) do |form| %>
+  <% if specialty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(specialty.errors.count, "error") %> prohibited this specialty from being saved:</h2>
+
+      <ul>
+      <% specialty.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <fieldset style="border-color: #97240a;">
+  <div class="field">
+    <%= form.label :Специальность %>
+    <%= form.text_field :specialty, id: :specialty_specialty, class: 'edit_input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Специализация %>
+    <%= form.text_field :specialization, id: :specialty_specialization, class: 'edit_input' %>
+  </div>
+
+    <div class="field">
+      <%= submit_tag "Сохранить", class: 'edit_button' %>
+    </div>
+  </fieldset>
+<% end %>

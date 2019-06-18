@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  skip_before_action :authorize, only: [:show, :index]
+  skip_before_action :authorize, only: [:show, :index, :groupsearch, :dsearch]
   before_action :set_group, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_group
 
@@ -15,6 +15,23 @@ class GroupsController < ApplicationController
       redirect_to groups_path, notice: 'Группа не найдена'
     end
   end
+
+  def groupsearch
+    @d = params[:specialty_id]
+    if Group.where(specialty_id: @d).count > 0
+      @groups = Group.where(specialty_id: @d)
+    end
+  end
+
+  def dsearch
+    @d = params[:group]
+   if Group.where(group: @d).count > 0
+    @groups = Group.where(group: @d)
+  else
+   redirect_to client_index_path, notice: 'Группа ' + @d + ' не найдена.'
+  end
+  end
+
 
   # GET /groups/1
   # GET /groups/1.json
@@ -83,6 +100,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:group, :specialty, :specialization)
+      params.require(:group).permit(:group, :specialty_id)
     end
 end

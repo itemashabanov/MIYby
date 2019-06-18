@@ -1,0 +1,38 @@
+<div class="main_group">
+    <h1 class="hh1">Группа найдена: <%= @d %></h1><br><br><br>
+
+
+  <table>
+    <% if Group.where(group: @d).count > 0 %>
+      <% @groups.each do |group| %>
+        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+          <td class="list_description">
+            <a href="<%= disciplines_dddsearch_path(:specialty_id => group.specialty_id, :group_id => group.group)%>">
+              <dt>
+                <%= group.group %>
+              </dt>
+            </a>
+          </td>
+          <td class="descript">
+            <dd>
+              Специальность: <%= truncate(strip_tags(group.specialty_id), length: 80) %>
+            </dd>
+          </td>
+          <% if session[:user_id] %>
+            <td class="list_action">
+              <%= link_to 'Изменить', edit_group_path(group) %><br/>
+              <%= link_to 'Удалить', group, method: :delete, data: { confirm: 'Вы уверены?' } %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+
+
+  <br>
+
+  <% if session[:user_id] %>
+    <%= link_to 'Добавить дисциплину', new_group_path %>
+  <% end %>
+</div>

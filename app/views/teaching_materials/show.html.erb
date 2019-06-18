@@ -12,6 +12,11 @@
   <%= @teaching_material.url %>
 </p>
 
+  <p>
+    <strong>Дисциплина:</strong>
+    <%= @teaching_material.discipline_id %>
+  </p>
+
 <%= link_to 'Изменить', edit_teaching_material_path(@teaching_material) %> |
 <%= link_to 'В меню', teaching_materials_path %>
 </div>

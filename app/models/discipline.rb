@@ -1,6 +1,7 @@
 class Discipline < ApplicationRecord
   self.primary_key = 'discipline'
-  belongs_to :group
+  has_and_belongs_to_many :specialty
   has_many :teaching_materials
-  validates :discipline, :teacher, :semester, :group_id, presence: true
+  validates :discipline, :course, :specialty_id, presence: true
+  validates :discipline, uniqueness: true
 end

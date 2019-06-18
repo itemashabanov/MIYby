@@ -15,7 +15,7 @@
 <% @groups.each do |group| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td class="list_description">
-      <a href="<%= disciplines_dddsearch_path(:group_id => group.group) %>">
+      <a href="<%= disciplines_dddsearch_path(:specialty_id => group.specialty_id, :group_id => group.group)%>">
         <dt>
           <%= group.group %>
         </dt>
@@ -23,10 +23,7 @@
     </td>
     <td class="descript">
         <dd>
-          Специальность: <%= truncate(strip_tags(group.specialty), length: 80) %>
-        </dd>
-        <dd>
-          Специализация: <%= truncate(strip_tags(group.specialization), length: 80) %>
+          Специальность: <%= truncate(strip_tags(group.specialty_id), length: 80) %>
         </dd>
     </td>
     <% if session[:user_id] %>

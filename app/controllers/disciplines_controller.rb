@@ -15,20 +15,21 @@ class DisciplinesController < ApplicationController
   end
 
   # link from client.html by group name
-  def dsearch
-    @d = params[:group_id]
-    if Discipline.where(group_id: @d).count > 0
-      @disciplines = Discipline.where(group_id: @d)
-    else
-      redirect_to client_index_path, notice: 'Дисциплины группы ' + @d + ' не найдены.'
-    end
-  end
+  #def dsearch
+  #  @d = params[:group_id]
+   # if Discipline.where(group_id: @d).count > 0
+    #  @disciplines = Discipline.where(group_id: @d)
+    #else
+     # redirect_to client_index_path, notice: 'Дисциплины группы ' + @d + ' не найдены.'
+    #end
+  #end
 
   # link from groups.html by group name
   def dddsearch
-    @ddd = params[:group_id]
-    if Discipline.where(group_id: @ddd).count > 0
-      @disciplines = Discipline.where(group_id: @ddd)
+    @g = params[:group_id]
+    @ddd = params[:specialty_id]
+    if Discipline.where(specialty_id: @ddd).count > 0
+      @disciplines = Discipline.where(specialty_id: @ddd)
     end
   end
 
@@ -109,6 +110,6 @@ class DisciplinesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discipline_params
-      params.require(:discipline).permit(:discipline, :teacher, :semester, :group_id)
+      params.require(:discipline).permit(:discipline, :teacher, :course, :specialty_id)
     end
 end

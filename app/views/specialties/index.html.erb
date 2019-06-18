@@ -1,0 +1,35 @@
+<div class="main_group">
+  <h1>Список специальностей</h1><br><br>
+
+<p id="notice"><%= notice %></p>
+<br>
+    <table>
+    <% @specialties.each do |specialty| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="list_description">
+          <a href="<%= groups_groupsearch_path(:specialty_id => specialty.specialty) %>">
+            <dt>
+              <%= specialty.specialty %>
+            </dt>
+          </a>
+        </td>
+        <td class="descript">
+          <dd>
+            Специализация: <%= truncate(strip_tags(specialty.specialization), length: 80) %>
+          </dd>
+        </td>
+        <% if session[:user_id] %>
+          <td class="list_action">
+            <%= link_to 'Изменить', edit_specialty_path(specialty) %><br/>
+            <%= link_to 'Удалить', specialty, method: :delete, data: { confirm: 'Вы уверены?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+  <br />
+  <% if session[:user_id] %>
+    <%= link_to 'Добавить специальность', new_specialty_path %>
+  <% end %>
+</div>

@@ -1,8 +1,8 @@
 <div class="client_form">
 
-  <%= form_tag(disciplines_dsearch_path, method: :get, class: 'client_search_form') do %>
+  <%= form_tag(groups_dsearch_path, method: :get, class: 'client_search_form') do %>
       <h1>Введите номер группы:</h1>
-      <%= text_field_tag :group_id, params[:group_id], class: 'client_search' %>
+      <%= text_field_tag :group, params[:group], class: 'client_search' %>
       <%= submit_tag "Найти", class: 'button' %>
       <p id="notice"><%= notice %></p>
   <% end %>
