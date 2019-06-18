@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29d3456b-e707-4392-85ea-d57ecfa0b7d4" name="Default" comment="" />
+    <list default="true" id="29d3456b-e707-4392-85ea-d57ecfa0b7d4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+    </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,6 +26,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Gemfile" value="1" />
           <entry key="erb" value="84" />
           <entry key="html" value="1" />
           <entry key="jbuilder" value="4" />
@@ -35,12 +38,13 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="RHTML" value="84" />
-          <entry key="Ruby" value="64" />
+          <entry key="Ruby" value="65" />
           <entry key="SCSS" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Gemfile" value="3" />
           <entry key="erb" value="928" />
           <entry key="rb" value="340" />
           <entry key="scss" value="35" />
@@ -49,7 +53,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="RHTML" value="928" />
-          <entry key="Ruby" value="340" />
+          <entry key="Ruby" value="343" />
           <entry key="SCSS" value="35" />
         </counts>
       </usages-collector>
@@ -57,16 +61,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/teaching_materials/ttsearch.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="21" selection-end-column="10" />
+              <caret line="21" column="10" selection-start-line="17" selection-start-column="6" selection-end-line="21" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -116,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/groups/dsearch.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="13">
               <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
             </state>
           </provider>
@@ -194,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/views/client/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/groups_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/groups/dsearch.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -209,8 +218,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="526" />
-    <option name="y" value="264" />
+    <option name="x" value="497" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="735" />
   </component>
@@ -491,15 +500,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543504680630</updated>
-      <workItem from="1560812092817" duration="12326000" />
+      <workItem from="1560812092817" duration="12502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12326000" />
+    <option name="totallyTimeSpent" value="12502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="526" y="264" width="1280" height="735" extended-state="0" />
+    <frame x="497" y="23" width="1280" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -537,9 +546,6 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/groups/_group.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/groups/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -813,7 +819,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="21" selection-end-column="10" />
+          <caret line="21" column="10" selection-start-line="17" selection-start-column="6" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -854,8 +860,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/groups/dsearch.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="13">
           <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
